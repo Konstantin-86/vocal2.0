@@ -1,0 +1,35 @@
+.inner {
+  background-color: var(--success);
+  color: var(--text);
+  height: 100dvh;
+  gap: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text,
+.texthide {
+  width: 200px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  padding: 7px 14px;
+  color: var(--text);
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
+}
+.texthideleft {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateX(-20px);
+}
+.texthideright {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateX(20px);
+}
