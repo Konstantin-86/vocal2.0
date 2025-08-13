@@ -13,6 +13,7 @@ export default function Home() {
           perferendis illo, facilis unde magni, dolore voluptas debitis. Sunt,
           ab odio?
         </h2>
+        <div className={styles.bg}></div>
       </div>
       <MainContent />
     </>

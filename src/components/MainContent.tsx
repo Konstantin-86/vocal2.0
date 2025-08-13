@@ -14,18 +14,25 @@ const MainContent = () => {
     triggerOnce: false, // Отслеживать постоянно (не только первый раз)
   });
   return (
-    <div className={styles.inner}>
-      <div ref={ref}>
-        <h2 className={inView ? styles.text : styles.texthideleft}>
-          Header inside viewport{" "}
-        </h2>
+    <>
+      <div className={styles.inner}>
+        <div ref={ref}>
+          <h2 className={inView ? styles.text : styles.texthideleft}>
+            Header inside viewport{" "}
+          </h2>
+        </div>
+        <div ref={ref2}>
+          <h2 className={inView2 ? styles.text : styles.texthideright}>
+            Header inside viewport{" "}
+          </h2>
+        </div>
       </div>
-      <div ref={ref2}>
-        <h2 className={inView2 ? styles.text : styles.texthideright}>
-          Header inside viewport{" "}
-        </h2>
+
+      <div className={styles.scroll}>
+        <div className={styles.box}></div>
       </div>
-    </div>
+      <div className={styles.bkock}></div>
+    </>
   );
 };
 

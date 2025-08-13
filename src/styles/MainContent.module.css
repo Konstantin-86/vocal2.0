@@ -1,5 +1,5 @@
 .inner {
-  background-color: var(--success);
+  background-color: #2d2d44;
   color: var(--text);
   height: 100dvh;
   gap: 14px;
@@ -32,4 +32,40 @@
   visibility: hidden;
   transition: all 1s;
   transform: translateX(20px);
+}
+.bkock {
+  height: 100dvh;
+  background-color: var(--text);
+}
+.scroll {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3b7b7;
+  position: relative;
+}
+
+/* Анимируемый элемент */
+.box {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 12px;
+  position: absolute;
+  bottom: 0;
+
+  animation: moveBox linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+@keyframes moveBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 1;
+  }
 }

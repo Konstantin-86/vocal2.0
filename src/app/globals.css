@@ -1,11 +1,13 @@
 :root {
   /* Основные цвета */
-  --background: #ffffff;
-  --text: #222222;
+  --background: #2d2d44;
+  --text: #e2e2e2;
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
-  --secondary: #f1f5f9;
+  --secondary: #f1f5f97e;
   --secondary-hover: #e2e8f0;
+
+  --accent: #d4af37;
 
   --border: #e2e8f0;
   --border-dark: #cbd5e1;
