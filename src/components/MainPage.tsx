@@ -1,7 +1,7 @@
 import Image from "next/image";
 import bgLarge from "@/images/bg.jpg";
 /* import bgLarge2 from "@/images/bg2.jpg"; */
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/MainPage.module.css";
 
 const MainPage = () => {
   return (
@@ -15,7 +15,7 @@ const MainPage = () => {
       />
       {/*  <Image fill priority className={styles.mainBg2} src={bgLarge2} alt="" /> */}
 
-      <div className={styles.container}>
+      <div className="container">
         <h1 className={styles.title}>Main title</h1>
         <h2 className={styles.subtitle}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium

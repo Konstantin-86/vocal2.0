@@ -27,6 +27,10 @@
   --input-border: #d1d5db;
   --placeholder: #9ca3af;
 
+  /* //текст  */
+  --text32to16: clamp(1rem, 0.75rem + 1.25vw, 2rem);
+  --text15to12: clamp(0.75rem, 0.7031rem + 0.2344vw, 0.9375rem);
+
   /* Особые элементы */
   --link: #3b82f6;
   --link-hover: #2563eb;
@@ -89,4 +93,12 @@ body {
   background-color: var(--background);
   color: var(--text);
   transition: var(--transition-theme);
+}
+.container {
+  max-width: 800px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+p {
+  font-size: var(--text15to12);
 }

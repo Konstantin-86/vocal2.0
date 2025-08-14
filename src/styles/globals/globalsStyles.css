@@ -1,0 +1,26 @@
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+
+  /* Начальное состояние анимации */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* Анимация при появлении в viewport */
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 20%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

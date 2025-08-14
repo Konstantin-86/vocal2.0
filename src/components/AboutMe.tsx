@@ -3,27 +3,29 @@ import Image from "next/image";
 import image from "@/images/bg2.jpg";
 
 import styles from "@/styles/AboutMe.module.css";
+import Title from "./Title";
 
 const AboutMe = () => {
   return (
     <div>
       <section className={styles.about} id="about">
-        <div className={styles.container}>
+        <div className="container">
+          <Title text="about me" />
           <div className={styles.wrapContent}>
-            <div className={styles.imageWrapper}>
+            <div className={styles.imageWrap}>
               <Image
                 src={image}
                 alt="Преподаватель вокала"
                 width={400}
                 height={500}
-                className={styles.image}
               />
             </div>
+
             <div className={styles.content}>
-              <h2 className={styles.title}>Обо мне</h2>
-              <p className={styles.subtitle}>
-                Профессиональный вокал для всех уровней
-              </p>
+              <div className={styles.subtitle}>
+                <p>Профессиональный вокал для всех уровней</p>
+              </div>
+
               <div className={styles.text}>
                 <p>
                   Меня зовут [Имя], я — профессиональный вокалист и
