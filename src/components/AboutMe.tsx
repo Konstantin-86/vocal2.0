@@ -40,13 +40,14 @@ const AboutMe = () => {
                 </p>
               </div>
               <ul className={styles.list}>
-                <li>✅ Авторская программа обучения</li>
-                <li>✅ Работа с дыханием и дикцией</li>
-                <li>✅ Подготовка к выступлениям</li>
+                <li>Авторская программа обучения</li>
+                <li>Работа с дыханием и дикцией</li>
+                <li>Подготовка к выступлениям</li>
               </ul>
             </div>
           </div>
         </div>
+        <div className={styles.bgGradient}></div>
       </section>
     </div>
   );

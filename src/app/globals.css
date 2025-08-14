@@ -6,8 +6,9 @@
   --primary-hover: #1d4ed8;
   --secondary: #f1f5f97e;
   --secondary-hover: #e2e8f0;
+  --secondary-text: #555;
 
-  --accent: #d4af37;
+  --accent: #6a3093;
 
   --border: #e2e8f0;
   --border-dark: #cbd5e1;
@@ -28,8 +29,8 @@
   --placeholder: #9ca3af;
 
   /* //текст  */
-  --text32to16: clamp(1rem, 0.75rem + 1.25vw, 2rem);
-  --text15to12: clamp(0.75rem, 0.7031rem + 0.2344vw, 0.9375rem);
+  --text32to16: clamp(1.125rem, 0.7813rem + 1.7188vw, 2.5rem);
+  --text15to12: clamp(0.9375rem, 0.8594rem + 0.3906vw, 1.25rem);
 
   /* Особые элементы */
   --link: #3b82f6;

@@ -1,14 +1,26 @@
 .about {
+  position: relative;
   padding-top: 100px;
+  margin-bottom: 70px;
+}
+.bgGradient {
+  position: absolute;
+  content: "";
+  bottom: -70px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #2d2d44, #2d2d44 10%, white 90%);
 }
 .wrapContent {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .imageWrap {
-  flex: 1;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -20,5 +32,13 @@
 .content {
   flex: 1;
 }
-.subtitle {
+.subtitle p {
+  margin-block: 14px;
+}
+.text p {
+  line-height: 120%;
+  margin-bottom: 14px;
+}
+.list {
+  list-style: none;
 }

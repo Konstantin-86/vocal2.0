@@ -27,10 +27,6 @@ const MainContent = () => {
           </h2>
         </div>
       </div>
-
-      <div className={styles.scroll}>
-        <div className={styles.box}></div>
-      </div>
       <div className={styles.bkock}></div>
     </>
   );

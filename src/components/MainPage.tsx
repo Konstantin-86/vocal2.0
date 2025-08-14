@@ -13,7 +13,6 @@ const MainPage = () => {
         src={bgLarge}
         alt="Добро пожаловать!"
       />
-      {/*  <Image fill priority className={styles.mainBg2} src={bgLarge2} alt="" /> */}
 
       <div className="container">
         <h1 className={styles.title}>Main title</h1>
