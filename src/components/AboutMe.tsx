@@ -1,9 +1,10 @@
 import Image from "next/image";
+import ImageSlider from "@/components/ImageSlider";
+import Title from "@/components/Title";
 
 import image from "@/images/bg2.jpg";
 
 import styles from "@/styles/AboutMe.module.css";
-import Title from "./Title";
 
 const AboutMe = () => {
   return (
@@ -47,7 +48,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className={styles.bgGradient}></div>
+        <ImageSlider />
       </section>
     </div>
   );

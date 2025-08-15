@@ -24,11 +24,7 @@
   border-radius: 7px;
   overflow: hidden;
 }
-.imageWrap img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
+
 .content {
   flex: 1;
 }

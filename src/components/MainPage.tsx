@@ -1,6 +1,5 @@
 import Image from "next/image";
-import bgLarge from "@/images/bg.jpg";
-/* import bgLarge2 from "@/images/bg2.jpg"; */
+import bgLarge from "@/images/bg/bg1.jpg";
 import styles from "@/styles/MainPage.module.css";
 
 const MainPage = () => {

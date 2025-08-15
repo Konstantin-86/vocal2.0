@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Title from "../Title";
-import Steps from "./StepsList";
+import Title from "@/components/Title";
+import Steps from "@/components/HowItWork/StepsList";
 
 import img1 from "@/images/HowitWork/howitwork.jpg";
 import img2 from "@/images/HowitWork/howitwork2.jpg";
@@ -16,9 +16,7 @@ const HowItWorks = () => {
           Каждый урок — это шаг к уверенному и красивому пению. Я работаю над
           техникой, эмоциями и вашим уникальным стилем!
         </p>
-
         <Steps />
-
         <div className={styles.formats}>
           <h3>Форматы занятий:</h3>
           <ul>
@@ -45,9 +43,6 @@ const HowItWorks = () => {
             height={200}
             alt="Работа над дыханием"
           />
-          <video controls poster="/videos/poster.jpg">
-            <source src="/videos/lesson-demo.mp4" type="video/mp4" />
-          </video>
         </div>
 
         <button className={styles.ctaButton}>Записаться на пробный урок</button>

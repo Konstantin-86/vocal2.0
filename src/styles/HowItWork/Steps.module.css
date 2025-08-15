@@ -1,11 +1,25 @@
-.steps {
+/* Основной контейнер */
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* Строки для десктопов */
+.stepsRow {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Общие стили для шагов */
 .step {
   background: white;
   color: var(--secondary-text);
@@ -13,7 +27,9 @@
   padding: 25px;
   width: 240px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .stepIcon {
@@ -29,8 +45,31 @@
   font-weight: bold;
 }
 
+/* Анимация появления */
+.animateIn,
+.animateIn .step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ховер-эффект */
 @media (hover: hover) {
   .step:hover {
     box-shadow: 0 5px 15px rgba(46, 44, 44, 0.404);
+  }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .stepsRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0;
   }
 }
