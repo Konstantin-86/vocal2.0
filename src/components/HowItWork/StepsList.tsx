@@ -2,7 +2,6 @@
 
 import { useInView } from "react-intersection-observer";
 import styles from "@/styles/HowItWork/Steps.module.css";
-import { useEffect, useState } from "react";
 
 interface Step {
   id: number;
@@ -60,81 +59,23 @@ const stepsData: Step[] = [
 ];
 
 const Steps = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Создаем массив refs и состояний inView для всех шагов заранее
-  const stepObservers = stepsData.map(() => {
-    const [ref, inView] = useInView({
-      triggerOnce: false,
-      threshold: 0.1,
-      rootMargin: "-50px 0px",
-    });
-    return { ref, inView };
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+    rootMargin: "-50px 0px",
   });
 
-  // Рендер для десктопов (ряды по 3 шага)
-  const renderDesktopRows = () => {
-    const rows = [];
-    for (let i = 0; i < stepsData.length; i += 3) {
-      const rowSteps = stepsData.slice(i, i + 3);
-      const rowObservers = stepObservers.slice(i, i + 3);
-
-      rows.push(
-        <div
-          key={`row-${i}`}
-          ref={rowObservers[0].ref} // Используем первый ref для всей строки
-          className={`${styles.stepsRow} ${
-            rowObservers.some((observer) => observer.inView)
-              ? styles.animateIn
-              : ""
-          }`}
-        >
-          {rowSteps.map((step, index) => (
-            <div key={step.id} className={styles.step}>
-              <div className={styles.stepIcon}>{step.id}</div>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-          ))}
-        </div>
-      );
-    }
-    return rows;
-  };
-
-  // Рендер для мобильных (отдельные шаги)
-  const renderMobileSteps = () => {
-    return stepsData.map((step, index) => {
-      const { ref, inView } = stepObservers[index];
-
-      return (
-        <div
-          key={step.id}
-          ref={ref}
-          className={`${styles.step} ${inView ? styles.animateIn : ""}`}
-        >
-          <div className={styles.stepIcon}>{step.id}</div>
-          <h3>{step.title}</h3>
-          <p>{step.description}</p>
-        </div>
-      );
-    });
-  };
-
   return (
-    <div className={styles.steps}>
-      {isMobile ? renderMobileSteps() : renderDesktopRows()}
+    <div className={styles.steps} ref={ref}>
+      <div className={`${styles.stepsGrid} ${inView ? styles.animateIn : ""}`}>
+        {stepsData.map((step) => (
+          <div key={step.id} className={styles.step}>
+            <div className={styles.stepIcon}>{step.id}</div>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,58 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.note {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  will-change: transform;
+  user-select: none;
+  opacity: 0.7;
+}
+
+/* Левая колонка (сверху вниз) */
+.note.left {
+  animation: floatDown linear forwards;
+  top: -50px;
+}
+
+/* Правая колонка (снизу вверх) */
+.note.right {
+  animation: floatUp linear forwards;
+  bottom: -50px;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+/* Стили для разных нот */
+.note[data-name="eighth-note"] {
+  font-weight: bold;
+}
+.note[data-name="quarter-note"] {
+  opacity: 0.9;
+}

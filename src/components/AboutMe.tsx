@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ImageSlider from "@/components/ImageSlider";
 import Title from "@/components/Title";
+import TextScroll from "./TextScroll";
 
 import image from "@/images/bg2.jpg";
 
@@ -48,6 +49,13 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
+        <TextScroll
+          text={
+            "Запишитесь на пробный урок вокала бесплатно! Раскройте свой голос с профессиональными педагогами."
+          }
+          speed={0.2}
+          repeat={10}
+        />
         <ImageSlider />
       </section>
     </div>

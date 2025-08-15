@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 
 import "./globals.css";
 import "@/styles/globals/globalsStyles.css";
+import FloatingNotes from "@/components/FloatingNotes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/*   <ThemeToggle /> */}
+        <FloatingNotes />
         <Header />
         {children}
       </body>

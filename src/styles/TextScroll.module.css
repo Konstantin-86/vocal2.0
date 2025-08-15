@@ -1,0 +1,46 @@
+.container {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--marquee-bg, #000);
+  color: var(--marquee-color, #fff);
+  padding: var(--marquee-padding, 15px 0);
+  position: relative;
+}
+
+.innerContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.content {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  transition: transform 0.8s ease-out;
+  font-size: var(--marquee-font-size, 1.5rem);
+  padding-right: 100%; /* Обеспечиваем непрерывность */
+  font-weight: var(--marquee-font-weight, 400);
+}
+
+/* Опциональные модификаторы */
+.container.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.container.top {
+  top: 0;
+  bottom: auto;
+}
+
+.container.large {
+  --marquee-font-size: 2rem;
+  --marquee-padding: 20px 0;
+}
+
+.container.light {
+  --marquee-bg: #f0f0f0;
+  --marquee-color: #333;
+}
