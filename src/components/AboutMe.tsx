@@ -1,64 +1,92 @@
 import Image from "next/image";
-import ImageSlider from "@/components/ImageSlider";
 import Title from "@/components/Title";
-import TextScroll from "./TextScroll";
 
-import image from "@/images/bg2.jpg";
+import teacherPortrait from "@/images/About/teaher.jpg";
+import diploma1 from "@/images/About/diplom1.jpg";
+import diploma2 from "@/images/About/dioplom2.jpg";
 
 import styles from "@/styles/AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <div>
-      <section className={styles.about} id="about">
-        <div className="container">
-          <Title text="about me" />
-          <div className={styles.wrapContent}>
-            <div className={styles.imageWrap}>
+    <section className={styles.section} id="about">
+      <div className="container" >
+        <div className={styles.titleWrapper}>
+          <Title text="About Me" />
+        </div>
+
+        <div className={styles.contentWrapper}>
+          <div className={styles.imageGallery}>
+            <div className={styles.mainImage}>
               <Image
-                src={image}
-                alt="Преподаватель вокала"
-                width={400}
-                height={500}
+                src={teacherPortrait}
+                alt="Professional vocal coach in studio"
+                width={500}
+                height={700}
+                priority
+                className={styles.portrait}
               />
             </div>
 
-            <div className={styles.content}>
-              <div className={styles.subtitle}>
-                <p>Профессиональный вокал для всех уровней</p>
-              </div>
-
-              <div className={styles.text}>
-                <p>
-                  Меня зовут [Имя], я — профессиональный вокалист и
-                  преподаватель с [X] годами опыта. Моя методика сочетает
-                  классическую школу и современные техники, помогая ученикам
-                  раскрыть природный потенциал голоса.
-                </p>
-                <p>
-                  Я закончила [Консерваторию/Академию], выступала на сценах
-                  [Примеры], а теперь помогаю другим обрести уверенность в своем
-                  голосе.
-                </p>
-              </div>
-              <ul className={styles.list}>
-                <li>Авторская программа обучения</li>
-                <li>Работа с дыханием и дикцией</li>
-                <li>Подготовка к выступлениям</li>
-              </ul>
+            <div className={styles.certificates}>
+              <Image
+                src={diploma1}
+                alt="Vocal training certificate"
+                width={200}
+                height={150}
+                className={styles.certificate}
+              />
+              <Image
+                src={diploma2}
+                alt="Music academy diploma"
+                width={200}
+                height={150}
+                className={styles.certificate}
+              />
             </div>
           </div>
+
+          <div className={styles.textContent}>
+            <h2 className={styles.tagline}>
+              Transform Your Voice with Professional Guidance
+            </h2>
+
+            <div className={styles.bio}>
+              <p>
+                Hi, I'm [Your Name], a certified vocal coach with [X] years of
+                professional teaching experience. My journey in music began at
+                [Conservatory Name] and led me to perform at [Notable Venues].
+              </p>
+              <p>
+                My teaching philosophy blends classical techniques with
+                contemporary approaches, tailored to each student's unique
+                voice. Whether you're preparing for auditions or just singing
+                for joy, I'll help you unlock your full vocal potential.
+              </p>
+            </div>
+
+            <ul className={styles.expertiseList}>
+              <li className={styles.expertiseItem}>
+                <span className={styles.checkIcon}>✓</span>
+                Certified vocal pedagogy training
+              </li>
+              <li className={styles.expertiseItem}>
+                <span className={styles.checkIcon}>✓</span>
+                Performance psychology coaching
+              </li>
+              <li className={styles.expertiseItem}>
+                <span className={styles.checkIcon}>✓</span>
+                Customized vocal exercises
+              </li>
+              <li className={styles.expertiseItem}>
+                <span className={styles.checkIcon}>✓</span>
+                Stage presence development
+              </li>
+            </ul>
+          </div>
         </div>
-        <TextScroll
-          text={
-            "Запишитесь на пробный урок вокала бесплатно! Раскройте свой голос с профессиональными педагогами."
-          }
-          speed={0.2}
-          repeat={10}
-        />
-        <ImageSlider />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

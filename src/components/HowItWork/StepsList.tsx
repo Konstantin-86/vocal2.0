@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
+
 import styles from "@/styles/HowItWork/Steps.module.css";
 
 interface Step {
@@ -62,7 +63,6 @@ const Steps = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
-    rootMargin: "-50px 0px",
   });
 
   return (

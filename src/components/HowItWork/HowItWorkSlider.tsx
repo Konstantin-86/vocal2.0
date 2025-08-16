@@ -13,13 +13,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import styles from "@/styles/ImageSlider.module.css";
+import styles from "@/styles/HowItWorkSlider.module.css";
 
-const ImageSlider = () => {
+const HowItWorkSlider = () => {
   return (
     <div className={styles.sliderContainer}>
       <Swiper
         loop
+        autoplay={true}
         centeredSlides={true}
         spaceBetween={20}
         breakpoints={{
@@ -57,4 +58,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default HowItWorkSlider;

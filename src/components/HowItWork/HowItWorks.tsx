@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Title from "@/components/Title";
 import Steps from "@/components/HowItWork/StepsList";
 
-import img1 from "@/images/HowitWork/howitwork.jpg";
-import img2 from "@/images/HowitWork/howitwork2.jpg";
+import HowItWorkSlider from "./HowItWorkSlider";
 
 import styles from "@/styles/HowItWork/HowItWorks.module.css";
 
@@ -34,19 +32,8 @@ const HowItWorks = () => {
             </li>
           </ul>
         </div>
-
-        <div className={styles.gallery}>
-          <Image src={img1} width={300} height={200} alt="Урок вокала" />
-          <Image
-            src={img2}
-            width={300}
-            height={200}
-            alt="Работа над дыханием"
-          />
-        </div>
-
-        <button className={styles.ctaButton}>Записаться на пробный урок</button>
       </div>
+      <HowItWorkSlider />
     </section>
   );
 };
