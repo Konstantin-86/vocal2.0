@@ -53,9 +53,9 @@ const AboutMe = () => {
 
             <div className={styles.bio}>
               <p>
-                Hi, I'm [Your Name], a certified vocal coach with [X] years of
+                Hi, I'm  a certified vocal coach with  years of
                 professional teaching experience. My journey in music began at
-                [Conservatory Name] and led me to perform at [Notable Venues].
+                [Conservatory Name] and led me to perform at
               </p>
               <p>
                 My teaching philosophy blends classical techniques with
