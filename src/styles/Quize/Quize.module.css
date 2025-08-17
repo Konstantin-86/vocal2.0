@@ -1,0 +1,45 @@
+/* Fullscreen-приветствие */
+.fullscreenGreeting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    z-index: 200;
+    font-size: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Контейнер опросника */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Форма ввода имени */
+.nameForm {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.nameForm input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

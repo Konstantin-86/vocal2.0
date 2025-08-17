@@ -22,10 +22,10 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="/visit"
-              className={pathname === "/visit" ? styles.active : styles.default}
+              href="/quize"
+              className={pathname === "/quize" ? styles.active : styles.default}
             >
-              visit
+              quize
             </Link>
           </li>
           <li>
