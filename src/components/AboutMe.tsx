@@ -10,7 +10,7 @@ import styles from "@/styles/AboutMe.module.css";
 const AboutMe = () => {
   return (
     <section className={styles.section} id="about">
-      <div className="container" >
+      <div className="container">
         <div className={styles.titleWrapper}>
           <Title text="About Me" />
         </div>
@@ -53,15 +53,15 @@ const AboutMe = () => {
 
             <div className={styles.bio}>
               <p>
-                Hi, I'm  a certified vocal coach with  years of
+                Hi, I&apos;m [Your Name], a certified vocal coach with [X] years of
                 professional teaching experience. My journey in music began at
-                [Conservatory Name] and led me to perform at
+                [Conservatory Name] and led me to perform at [Notable Venues].
               </p>
               <p>
                 My teaching philosophy blends classical techniques with
-                contemporary approaches, tailored to each student's unique
-                voice. Whether you're preparing for auditions or just singing
-                for joy, I'll help you unlock your full vocal potential.
+                contemporary approaches, tailored to each student&apos;s unique
+                voice. Whether you&apos;re preparing for auditions or just singing
+                for joy, I&apos;ll help you unlock your full vocal potential.
               </p>
             </div>
 
