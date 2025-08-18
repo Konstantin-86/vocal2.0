@@ -1,0 +1,156 @@
+.wrap {
+  position: relative;
+  height: 400vh; /* 4 секции по 100vh */
+}
+
+/* Общие стили для всех секций */
+.s1,
+.s2,
+.s3,
+.s4 {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Индивидуальные стили для каждой секции */
+.s1 {
+  /*  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  z-index: 100;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.s2 {
+  background: linear-gradient(135deg, #3a3a5d 0%, #4a4a7a 100%);
+  top: 47px;
+  z-index: 101;
+}
+
+.s3 {
+  background: linear-gradient(135deg, #474775 0%, #575795 100%);
+  top: 94px;
+  z-index: 102;
+}
+
+.s4 {
+  background: linear-gradient(135deg, #53538e 0%, #6363b0 100%);
+  top: 60px;
+  z-index: 103;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.title2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Стили для текста */
+.mainTitle {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  color: #2c3e50;
+  font-size: 40px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Стили для списка преимуществ */
+.perks {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.perkItem {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.perkIcon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* Стили для карточек методик */
+.techniques {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.techniqueCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Стили для CTA секции */
+.ctaContent {
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.ctaLine {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appear 0.5s forwards;
+}
+
+.ctaLine:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.ctaLine:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.ctaLine:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.ctaButton {
+  background: white;
+  color: #d76d77;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимации */
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
