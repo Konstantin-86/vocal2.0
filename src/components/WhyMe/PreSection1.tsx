@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import img1 from "@/images/WhyMe/img1.jpg";
 import Image from "next/image";
 
-import styles from "@/styles/WhyMe/PreSection1.module.css";
+import styles from "@/styles/WhyMe/PreSection.module.css";
 const Content1 = () => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,

@@ -132,6 +132,11 @@
 }
 
 /* Desktop styles */
+@media (max-width: 768px) {
+  .contentWrapper {
+    margin-top: 24px;
+  }
+}
 @media (min-width: 992px) {
   .section {
     padding-top: 120px;

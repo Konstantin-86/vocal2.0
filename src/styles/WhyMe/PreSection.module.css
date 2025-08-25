@@ -1,0 +1,316 @@
+.s1 {
+  background-color: #2d2d44;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.title {
+  font-size: 32px;
+  text-transform: lowercase;
+  text-align: center;
+  margin-block: 14px;
+}
+
+.titleVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentBlock {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+.contentVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.highlight {
+  color: #4ecdc4; /* Мятный акцент вместо красного */
+  font-weight: 600;
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.03);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(46, 46, 68, 0.9);
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+}
+
+.benefitIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #4ecdc4;
+  color: #2d2d44;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 150px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.imageContainer {
+  flex: 0 0 40%;
+  text-align: center;
+}
+
+.contentImage {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imageCaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+.perks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.perkItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 7px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.perkText::first-letter {
+  color: #4ecdc4;
+  font-size: 26px;
+}
+
+.perkItem:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.perkIcon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover img {
+  transform: scale(1.05);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* ///////////////// 3  */
+.techniques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.techniqueCard {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.techniqueCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.techniqueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.techniqueCard h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2d3748;
+  line-height: 1.3;
+}
+
+.techniqueCard p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+/* /////////////////  */
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 5px;
+  }
+  .techniques {
+    margin-top: 20px;
+    gap: 14px;
+  }
+  .techniqueCard {
+    padding: 7px;
+  }
+  .techniqueCard h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .techniqueCard p {
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .visualGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .contentWrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .perks {
+    gap: 14px;
+  }
+  .perkItem {
+    font-size: 16px;
+  }
+  .perkText::first-letter {
+    font-size: 18px;
+  }
+
+  .imageContainer {
+    order: -1;
+    width: 100%;
+  }
+}

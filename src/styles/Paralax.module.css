@@ -26,13 +26,13 @@
 
 .s2 {
   background: linear-gradient(135deg, #3a3a5d 0%, #4a4a7a 100%);
-  top: 47px;
+  top: 55px;
   z-index: 101;
 }
 
 .s3 {
   background: linear-gradient(135deg, #474775 0%, #575795 100%);
-  top: 94px;
+  top: 110px;
   z-index: 102;
 }
 
@@ -106,6 +106,10 @@
 
 /* Стили для CTA секции */
 .ctaContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 

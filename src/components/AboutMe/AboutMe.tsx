@@ -2,10 +2,9 @@ import Image from "next/image";
 import Title from "@/components/Title";
 
 import teacherPortrait from "@/images/About/teaher.jpg";
-import diploma1 from "@/images/About/diplom1.jpg";
-import diploma2 from "@/images/About/dioplom2.jpg";
 
 import styles from "@/styles/AboutMe.module.css";
+import AboutMeSlider from "./AboutMeSlider";
 
 const AboutMe = () => {
   return (
@@ -29,20 +28,7 @@ const AboutMe = () => {
             </div>
 
             <div className={styles.certificates}>
-              <Image
-                src={diploma1}
-                alt="Vocal training certificate"
-                width={200}
-                height={150}
-                className={styles.certificate}
-              />
-              <Image
-                src={diploma2}
-                alt="Music academy diploma"
-                width={200}
-                height={150}
-                className={styles.certificate}
-              />
+              <AboutMeSlider />
             </div>
           </div>
 
@@ -53,15 +39,17 @@ const AboutMe = () => {
 
             <div className={styles.bio}>
               <p>
-                Hi, I&apos;m [Your Name], a certified vocal coach with [X] years of
-                professional teaching experience. My journey in music began at
-                [Conservatory Name] and led me to perform at [Notable Venues].
+                Hi, I&apos;m [Your Name], a certified vocal coach with [X] years
+                of professional teaching experience. My journey in music began
+                at [Conservatory Name] and led me to perform at [Notable
+                Venues].
               </p>
               <p>
                 My teaching philosophy blends classical techniques with
                 contemporary approaches, tailored to each student&apos;s unique
-                voice. Whether you&apos;re preparing for auditions or just singing
-                for joy, I&apos;ll help you unlock your full vocal potential.
+                voice. Whether you&apos;re preparing for auditions or just
+                singing for joy, I&apos;ll help you unlock your full vocal
+                potential.
               </p>
             </div>
 

@@ -29,7 +29,7 @@
   --placeholder: #9ca3af;
 
   /* //текст  */
-  --text32to16: clamp(1.125rem, 0.7813rem + 1.7188vw, 2.5rem);
+  --text32to16: clamp(2rem, 1.6667rem + 0.6944vw, 2.5rem);
   --text15to12: clamp(0.9375rem, 0.8594rem + 0.3906vw, 1.25rem);
 
   /* Особые элементы */
@@ -96,6 +96,7 @@ body {
   transition: var(--transition-theme);
 }
 .container {
+  overflow: hidden;
   max-width: 800px;
   padding: 0 5px;
   margin: 0 auto;
