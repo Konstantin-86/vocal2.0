@@ -1,9 +1,9 @@
 import styles from "@/styles/Paralax.module.css";
-import Content1 from "./WhyMe/PreSection1";
-import Content2 from "./WhyMe/PreSection2";
-import Content3 from "./WhyMe/PreSection3";
+import Content1 from "./PreSection1";
+import Content2 from "./PreSection2";
+import Content3 from "./PreSection3";
 
-const Paralax = () => {
+const WhyMe = () => {
   return (
     <>
       <div className={styles.wrap}>
@@ -33,4 +33,4 @@ const Paralax = () => {
   );
 };
 
-export default Paralax;
+export default WhyMe;

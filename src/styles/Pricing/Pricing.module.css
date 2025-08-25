@@ -1,0 +1,207 @@
+.pricing {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Hover эффекты только для устройств с мышью */
+@media (hover: hover) and (pointer: fine) {
+  .card {
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .button {
+    transition: opacity 0.3s ease;
+  }
+
+  .button:hover {
+    opacity: 0.9;
+  }
+}
+
+.recommended {
+  border: 2px solid #6c5ce7;
+}
+
+/* На мобильных устройствах убираем transform: scale */
+@media (max-width: 768px) {
+  .recommended {
+    transform: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .recommended {
+    transform: scale(1.03);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #6c5ce7;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cardTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.priceContainer {
+  margin: 24px 0;
+}
+
+.priceValue {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pricePeriod {
+  color: #888;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.cardDescription {
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.featureItem {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.featureItem:before {
+  content: "✓ ";
+  color: #6c5ce7;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.primary {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.secondary {
+  background-color: #dfe6e9;
+  color: #333;
+}
+
+.note {
+  margin-top: 50px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.note p {
+  margin: 10px 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .pricing {
+    padding: 60px 15px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .priceValue {
+    font-size: 32px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .badge {
+    top: -10px;
+    right: 15px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

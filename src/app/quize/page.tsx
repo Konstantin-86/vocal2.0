@@ -1,58 +1,60 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import styles from '@/styles/Quize/Quize.module.css'
-import StartQuize from '@/components/Quize/StartQuize'
+import { useState, useEffect } from "react";
+import StartQuize from "@/components/Quize/StartQuize";
+
+import styles from "@/styles/Quize/Quize.module.css";
 
 export default function QuizPage() {
-  const [name, setName] = useState('')
-  const [showGreeting, setShowGreeting] = useState(false)
-  const [showQuiz, setShowQuiz] = useState(false)
+  const [name, setName] = useState("");
+  const [showGreeting, setShowGreeting] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false);
 
   useEffect(() => {
-    const savedName = typeof window !== 'undefined'
-      ? localStorage.getItem('vocalQuizName')
-      : null
+    const savedName =
+      typeof window !== "undefined"
+        ? localStorage.getItem("vocalQuizName")
+        : null;
 
     if (savedName) {
-      setName(savedName)
-      showGreetingWithTimer()
+      setName(savedName);
+      showGreetingWithTimer();
     }
-  }, [])
+  }, []);
 
   const showGreetingWithTimer = () => {
-    setShowGreeting(true)
+    setShowGreeting(true);
     const timer = setTimeout(() => {
-      setShowGreeting(false)
-      setShowQuiz(true)
-    }, 1500)
-    return () => clearTimeout(timer)
-  }
+      setShowGreeting(false);
+      setShowQuiz(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  };
 
   const handleNameSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (name.trim()) {
-      localStorage.setItem('vocalQuizName', name.trim())
-      showGreetingWithTimer()
+      localStorage.setItem("vocalQuizName", name.trim());
+      showGreetingWithTimer();
     }
-  }
+  };
 
   if (showGreeting) {
     return (
       <div className={styles.fullscreenGreeting}>
         <h1>Привет, {name}!</h1>
       </div>
-    )
+    );
   }
 
   // Основной контент
   return (
-    <div className={styles.container}>
+    <div>
       {!showQuiz ? (
         // Форма ввода имени
         <div className={styles.nameForm}>
           <h2>Давайте познакомимся</h2>
-          <form onSubmit={handleNameSubmit}>
+          <form className={styles.form} onSubmit={handleNameSubmit}>
             <input
               type="text"
               value={name}
@@ -60,16 +62,19 @@ export default function QuizPage() {
               placeholder="Ваше имя"
               required
             />
-            <button type="submit">Начать опрос</button>
+            <button className={styles.startButton} type="submit">
+              Начать опрос
+            </button>
           </form>
         </div>
       ) : (
         <div className={styles.quiz}>
-          <h2>Опросник по вокалу</h2>
-          <p>Добро пожаловать, {name}!</p>
+          <div className={styles.quizHeader}>
+            <p>Добро пожаловать, {name}!</p>
+          </div>
           <StartQuize />
         </div>
       )}
     </div>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-import MainContent from "@/components/MainContent";
+import Pricing from "@/components/Pricing/Pricing";
 import MainPage from "@/components/MainPage";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import HowItWorks from "@/components/HowItWork/HowItWorks";
-import Paralax from "@/components/Paralax";
+import WhyMe from "@/components/WhyMe/WhyMe";
 
 export default function Home() {
   return (
     <>
       <MainPage />
       <AboutMe />
-      <Paralax />
+      <WhyMe />
       <HowItWorks />
-      <MainContent />
+      <Pricing />
     </>
   );
 }

@@ -1,45 +1,83 @@
 /* Fullscreen-приветствие */
 .fullscreenGreeting {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--background);
-    z-index: 200;
-    font-size: 2rem;
-    animation: fadeIn 0.5s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  z-index: 200;
+  font-size: 2rem;
+  animation: fadeIn 0.5s ease-out;
+}
+.fullscreenGreeting h1 {
+  text-align: center;
+  font-size: 32px;
 }
 
 /* Контейнер опросника */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Форма ввода имени */
 .nameForm {
-    text-align: center;
-    margin-top: 3rem;
+  text-align: center;
+  margin-top: 3rem;
 }
-
+.nameForm h2 {
+  margin-bottom: 14px;
+}
 .nameForm input {
-    padding: 0.8rem;
-    font-size: 1rem;
-    margin-right: 1rem;
+  border-radius: 7px;
+  margin-right: 24px;
+  padding: 7px 24px;
+  outline: none;
+  border: 2px solid transparent;
+}
+.nameForm input:focus {
+  border: 2px solid #4ecdc4;
+}
+.startButton {
+  position: relative;
+  border-radius: 7px;
+  padding: 7px 24px;
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.quizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 14px;
+}
+@media (hover: hover) {
+  .startButton:hover {
+    background-color: #c0bebe;
+  }
 }
 
 /* Анимации */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
